@@ -22,12 +22,12 @@ jobs:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build haddocks
-        run: git clone https://github.com/dmjio/miso && cd miso && nix develop --command bash -c 'cabal haddock-project && cp -rv ./haddocks public'
+        run: git clone https://github.com/dmjio/miso && cd miso && nix develop --command bash -c 'cabal haddock-project'
 
       - name: Upload haddocks
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: ./miso/haddocks
 
   deploy:
     if: github.ref == 'refs/heads/master'
