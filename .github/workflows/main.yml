@@ -21,10 +21,10 @@ jobs:
         with:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build using Nix
-        run: git clone https://github.com/dmjio/miso && cd miso && nix develop --command bash -c 'cabal haddock-project'
+      - name: Build haddocks
+        run: git clone https://github.com/dmjio/miso && cd miso && nix develop --command bash -c 'cabal haddock-project && ls'
 
-      - name: Upload artifact
+      - name: Upload haddocks
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./haddocks
