@@ -22,7 +22,7 @@ jobs:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build haddocks
-        run: git clone https://github.com/dmjio/miso && cd miso && nix develop --command bash -c 'cabal haddock-project'
+        run: git clone --depth=1 https://github.com/dmjio/miso && cd miso && nix develop --command bash -c 'cabal haddock-project'
 
       - name: Upload haddocks
         uses: actions/upload-pages-artifact@v3
