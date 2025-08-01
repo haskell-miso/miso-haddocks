@@ -584,11 +584,11 @@
         "servant": "servant"
       },
       "locked": {
-        "lastModified": 1753978931,
-        "narHash": "sha256-gyCWGPmsNneDtD0o9tn1Y8JGUP7/Tg4ozzmTz0gx2yI=",
+        "lastModified": 1754060044,
+        "narHash": "sha256-l6Ppjd3uw1G4ZkTrHap7+taiPLDW++/ufEn5oOjcQRE=",
         "owner": "dmjio",
         "repo": "miso",
-        "rev": "7c4d2b7111b5c8d8b6dbe519d7dcf6257f970bef",
+        "rev": "5c4d63ff29d2ea3fed78c7a7a97d3e56e9afec2c",
         "type": "github"
       },
       "original": {
@@ -725,6 +725,20 @@
         "type": "github"
       }
     },
+    "nixpkgs_4": {
+      "locked": {
+        "lastModified": 1753934836,
+        "narHash": "sha256-G06FmIBj0I5bMW1Q8hAEIl5N7IHMK7+Ta4KA+BmneDA=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "8679b16e11becd487b45d568358ddf9d5640d860",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
     "old-ghc-nix": {
       "flake": false,
       "locked": {
@@ -744,7 +758,8 @@
     },
     "root": {
       "inputs": {
-        "miso": "miso"
+        "miso": "miso",
+        "nixpkgs": "nixpkgs_4"
       }
     },
     "servant": {
