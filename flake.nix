@@ -21,7 +21,7 @@
           git reset --hard ${nodes.miso.locked.rev}
           cabal update
           cabal configure --flag miso:+template-haskell
-          cabal haddock-project
+          cabal haddock-project --hoogle
         '';
       });
 }
